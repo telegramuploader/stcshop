@@ -33,6 +33,14 @@ class Products(models.Model):
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
 
+    def listname(self):
+        self.prname=self.name
+        if len(self.prname) > 15:
+            self.lname=self.prname[0:15]+"..."
+        else:
+            self.lname=self.prname
+        return self.lname
+            
 
     def get_url(self):
         return reverse('shop:productdetial',args=[self.category.slug,self.slug])
