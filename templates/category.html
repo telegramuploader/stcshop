@@ -41,17 +41,17 @@
 <br>
 <div>
     <h1 class="text-center my_title">Our Products</h1>
-    <p class="text-justify">alvtbrutnwethliwehtmweivdvbgwnuygvwnrhieromwciohgvenopignwrmfroegpbenvomfocfbnwvcrmwwwwwwwwwwwwwwwmgwrotiynbmfioenbmox3cbnqmoexmnvtbugitwhnvem,xq.zdeirurtrnitowricmqfhirnbo</p>
+    <p class="text-justify text-center">Welcome to STC shop.Thank you for visiting</p>
 </div>
     {% endif %}
 <div class="container">
     <div class="row mx_auto">
         {% for product in products.object_list %}
         <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-lg-4">
-            <div class="card text-center" style="min-width:18rem;">
-                <a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
+            <div class="card text-center" style="min-width:15rem;">
+                <a href="{{product.get_url}}"><img class="card-img-top my_image" style="height:150px;width:200px" src="{{product.image.url}}" alt="{{product.name}}"></a>
                 <div class="card-body">
-                    <h4>{{product.name}}</h4>
+                    <h4>{{product.listname}}</h4>
                     <p>{{product.price}}</p>
                 </div>
             </div>
